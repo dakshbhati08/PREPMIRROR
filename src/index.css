@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans bg-ink-50 text-ink-800;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-300 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ink-400;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-ink-200 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-600 text-white font-medium transition-all hover:bg-brand-700 active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white text-brand-700 font-medium border border-brand-200 transition-all hover:bg-brand-50 active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand-100;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-ink-600 font-medium transition-all hover:bg-ink-100 active:scale-95 focus:outline-none focus:ring-2 focus:ring-ink-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-ink-200 bg-white text-ink-800 placeholder-ink-400 transition-all focus:outline-none focus:ring-4 focus:ring-brand-100 focus:border-brand-400;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
